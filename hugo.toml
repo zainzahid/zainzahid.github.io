@@ -1,0 +1,49 @@
+baseURL = 'https://zainzahid.github.io'
+languageCode = 'en-us'
+title = 'Zain Zahid - Software Engineer'
+theme = 'portfolio'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  author = "Zain Zahid"
+
+[outputs]
+  home = ["HTML"]
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "#header"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    url = "#about"
+    weight = 20
+  [[menu.main]]
+    name = "Experience"
+    url = "#experience"
+    weight = 30
+  [[menu.main]]
+    name = "Skills"
+    url = "#skills"
+    weight = 40
+  [[menu.main]]
+    name = "Education"
+    url = "#education"
+    weight = 50
+  [[menu.main]]
+    name = "Awards"
+    url = "#awards"
+    weight = 60
+  [[menu.main]]
+    name = "Certifications"
+    url = "#certifications"
+    weight = 70
+  [[menu.main]]
+    name = "Contact"
+    url = "#contact"
+    weight = 80

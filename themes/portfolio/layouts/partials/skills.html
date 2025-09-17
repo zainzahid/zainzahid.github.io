@@ -1,0 +1,10 @@
+{{ range .Params.skill_groups }}
+<div class="skill-group">
+  <h3>{{ .name }}</h3>
+  <div>
+    {{ range .skills }}
+    <span class="skill-item">{{ . }}</span>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

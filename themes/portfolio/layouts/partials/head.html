@@ -1,0 +1,353 @@
+<style>
+  /*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+  @font-face {
+    font-family: "Space Grotesk";
+    src: url("{{ "assets/SpaceGrotesk.ttf" | relURL }}") format("truetype");
+  }
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    color: #444444;
+    background-color: #f8f9fa;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  a {
+    color: #12d640;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #0faa33;
+    text-decoration: none;
+  }
+
+  /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+  .header-tops {
+    background: #0e1624;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+  }
+
+  .header-tops h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .header-tops h1 a {
+    color: #fff;
+  }
+
+  .header-tops h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .nav-menu {
+    margin-top: 30px;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+  }
+
+  .nav-menu li {
+    margin: 0 15px;
+  }
+
+  .nav-menu a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu .active > a {
+    color: #fff;
+  }
+
+  .social-links {
+    margin-top: 30px;
+  }
+
+  .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+  }
+
+  .social-links a:hover {
+    background: #12d640;
+    color: #fff;
+  }
+
+  /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+  section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #12d640;
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+
+  .section-title p {
+    margin-bottom: 0;
+  }
+
+  /*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+  .about {
+    background: #fff;
+  }
+
+  .about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+  }
+
+  .about .content p {
+    margin-bottom: 20px;
+  }
+
+  .about .content .icon-box {
+    margin-top: 20px;
+  }
+
+  .about .content .icon-box h4 {
+    font-size: 18px;
+    color: #0e1624;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  /*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+  .resume {
+    background: #f9f9f9;
+  }
+
+  .resume .resume-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #173b6c;
+  }
+
+  .resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #12d640;
+    position: relative;
+  }
+
+  .resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0e1624;
+    margin-bottom: 10px;
+  }
+
+  .resume .resume-item h5 {
+    font-size: 16px;
+    background: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .resume .resume-item ul {
+    padding-left: 20px;
+  }
+
+  .resume .resume-item ul li {
+    padding-bottom: 10px;
+  }
+
+  .resume .resume-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #12d640;
+  }
+
+  /*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+  .skills {
+    background: #fff;
+  }
+
+  .skills .skill-item {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 600;
+    color: #0e1624;
+    font-size: 14px;
+  }
+
+  .skill-group {
+    margin-bottom: 20px;
+  }
+
+  .skill-group h3 {
+    font-size: 20px;
+    color: #173b6c;
+    margin-bottom: 15px;
+  }
+
+  #awards {
+    background: #fff;
+  }
+
+  /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+  .contact {
+    background: #f9f9f9;
+  }
+
+  .contact .info {
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .contact .info i {
+    font-size: 20px;
+    color: #12d640;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #f3f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0e1624;
+  }
+
+  .contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #444444;
+  }
+
+  .contact .info .email:hover i,
+  .contact .info .address:hover i,
+  .contact .info .phone:hover i {
+    background: #12d640;
+    color: #fff;
+  }
+
+  /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+  #footer {
+    background: #0e1624;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  #footer h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+
+  #footer p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+
+  #footer .social-links {
+    margin: 0 0 40px 0;
+  }
+
+  #footer .copyright {
+    margin: 0 0 5px 0;
+  }
+</style>

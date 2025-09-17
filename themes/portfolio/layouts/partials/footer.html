@@ -1,0 +1,51 @@
+<!-- Main JS File -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Typing animation
+    const typed = new Typed(".typing", {
+      strings: [
+        "Software Engineer",
+        "Full Stack Developer",
+        "AI Expert",
+        "React | Angular | Node.js | Python Expert",
+      ],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40,
+      backDelay: 1500,
+    });
+
+    // Smooth scroll for links with hash
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+
+    // Active navigation on scroll
+    const navLinks = document.querySelectorAll(".nav-menu a");
+    const sections = document.querySelectorAll("section");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  });
+</script>

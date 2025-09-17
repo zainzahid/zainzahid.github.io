@@ -1,12 +1,26 @@
 {
   "name": "zainzahid.github.io",
-  "module": "index.ts",
-  "type": "module",
+  "version": "2.0.0",
+  "description": "Zain Zahid's personal portfolio website built with Hugo",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "scripts": {
+    "dev": "hugo server --buildDrafts --buildFuture --port 1313",
+    "build": "hugo --gc --minify",
+    "preview": "hugo server --minify --disableFastRender --port 1314",
+    "clean": "rm -rf public resources .hugo_build.lock"
   },
-  "peerDependencies": {
-    "typescript": "^5"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zainzahid/zainzahid.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "hugo",
+    "static-site",
+    "personal-website",
+    "software-engineer"
+  ],
+  "author": "Zain Zahid <zainzahid.it@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://zainzahid.github.io"
 }

@@ -1,0 +1,14 @@
+{{ range .Params.awards }}
+<div class="resume-item">
+  <h4>{{ .title }}</h4>
+  <h5>{{ .date }}</h5>
+  <h6>
+    <b><em>{{ .organization }}</em></b>
+  </h6>
+  {{ if .link }}
+  <p>
+    <a href="{{ .link }}" target="_blank">View</a>
+  </p>
+  {{ end }}
+</div>
+{{ end }}

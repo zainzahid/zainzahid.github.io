@@ -1,0 +1,14 @@
+{{ range .Params.jobs }}
+<div class="resume-item">
+  <h4>{{ .title }}</h4>
+  <h5>{{ .period }}</h5>
+  <h6>
+    <b><em>{{ .company }}{{ if .location }} - {{ .location }}{{ end }}</em></b>
+  </h6>
+  <ul>
+    {{ range .responsibilities }}
+    <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

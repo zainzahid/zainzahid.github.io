@@ -1,0 +1,21 @@
+{{ range .Params.degrees }}
+<div class="resume-item">
+  <h4>{{ .degree }}</h4>
+  <h5>{{ .period }}</h5>
+  <h6>
+    <b><em>{{ .institution }}{{ if .location }} - {{ .location }}{{ end }}</em></b>
+  </h6>
+  {{ if .description }}
+  <p>{{ .description }}</p>
+  {{ end }}
+  {{ if .highlights }}
+  <ul>
+    {{ range .highlights }}
+    <li>
+      <strong>{{ .name }}:</strong> {{ .description }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}
