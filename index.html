@@ -2,555 +2,1104 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Zain Zahid - Software Engineer</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="Full Stack Engineer with over 5 years of experience in diverse work environments"
+      name="description"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta
+      content="software engineer, full-stack, javascript, typescript, react, next.js, node.js, python"
+      name="keywords"
+    />
 
-    <title>Zain Zahid</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon.png" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom fonts for this template -->
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.css" rel="stylesheet" />
+    <style>
+      /*--------------------------------------------------------------
+    # General
+    --------------------------------------------------------------*/
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("assets/SpaceGrotesk.ttf") format("truetype");
+      }
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        color: #444444;
+        background-color: #f8f9fa;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      a {
+        color: #12d640;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #0faa33;
+        text-decoration: none;
+      }
+
+      /*--------------------------------------------------------------
+    # Header
+    --------------------------------------------------------------*/
+      .header-tops {
+        background: #0e1624;
+        padding: 80px 0;
+        text-align: center;
+        color: #fff;
+      }
+
+      .header-tops h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .header-tops h1 a {
+        color: #fff;
+      }
+
+      .header-tops h2 {
+        font-size: 24px;
+        margin-top: 10px;
+      }
+
+      .nav-menu {
+        margin-top: 30px;
+      }
+
+      .nav-menu ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        justify-content: center;
+      }
+
+      .nav-menu li {
+        margin: 0 15px;
+      }
+
+      .nav-menu a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        display: block;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .nav-menu a:hover,
+      .nav-menu .active > a {
+        color: #fff;
+      }
+
+      .social-links {
+        margin-top: 30px;
+      }
+
+      .social-links a {
+        font-size: 24px;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        line-height: 1;
+        padding: 8px 0;
+        margin-right: 4px;
+        border-radius: 50%;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+      }
+
+      .social-links a:hover {
+        background: #12d640;
+        color: #fff;
+      }
+
+      /*--------------------------------------------------------------
+    # Sections General
+    --------------------------------------------------------------*/
+      section {
+        padding: 60px 0;
+        overflow: hidden;
+      }
+
+      .section-title {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: #12d640;
+        bottom: 0;
+        left: calc(50% - 25px);
+      }
+
+      .section-title p {
+        margin-bottom: 0;
+      }
+
+      /*--------------------------------------------------------------
+    # About
+    --------------------------------------------------------------*/
+      .about {
+        background: #fff;
+      }
+
+      .about .content h3 {
+        font-weight: 700;
+        font-size: 26px;
+        color: #173b6c;
+      }
+
+      .about .content p {
+        margin-bottom: 20px;
+      }
+
+      .about .content .icon-box {
+        margin-top: 20px;
+      }
+
+      .about .content .icon-box h4 {
+        font-size: 18px;
+        color: #0e1624;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      /*--------------------------------------------------------------
+    # Resume
+    --------------------------------------------------------------*/
+      .resume {
+        background: #f9f9f9;
+      }
+
+      .resume .resume-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #173b6c;
+      }
+
+      .resume .resume-item {
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid #12d640;
+        position: relative;
+      }
+
+      .resume .resume-item h4 {
+        line-height: 18px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #0e1624;
+        margin-bottom: 10px;
+      }
+
+      .resume .resume-item h5 {
+        font-size: 16px;
+        background: #e4edf9;
+        padding: 5px 15px;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .resume .resume-item ul {
+        padding-left: 20px;
+      }
+
+      .resume .resume-item ul li {
+        padding-bottom: 10px;
+      }
+
+      .resume .resume-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .resume .resume-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -9px;
+        top: 0;
+        background: #fff;
+        border: 2px solid #12d640;
+      }
+
+      /*--------------------------------------------------------------
+    # Skills
+    --------------------------------------------------------------*/
+      .skills {
+        background: #fff;
+      }
+
+      .skills .skill-item {
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        background: #f8f9fa;
+        border-radius: 5px;
+        display: inline-block;
+        font-weight: 600;
+        color: #0e1624;
+        font-size: 14px;
+      }
+
+      .skill-group {
+        margin-bottom: 20px;
+      }
+
+      .skill-group h3 {
+        font-size: 20px;
+        color: #173b6c;
+        margin-bottom: 15px;
+      }
+
+      #awards {
+        background: #fff;
+      }
+
+      /*--------------------------------------------------------------
+    # Contact
+    --------------------------------------------------------------*/
+      .contact {
+        background: #f9f9f9;
+      }
+
+      .contact .info {
+        padding: 30px;
+        background: #fff;
+        width: 100%;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .contact .info i {
+        font-size: 20px;
+        color: #12d640;
+        float: left;
+        width: 44px;
+        height: 44px;
+        background: #f3f7f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .contact .info h4 {
+        padding: 0 0 0 60px;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #0e1624;
+      }
+
+      .contact .info p {
+        padding: 0 0 0 60px;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: #444444;
+      }
+
+      .contact .info .email:hover i,
+      .contact .info .address:hover i,
+      .contact .info .phone:hover i {
+        background: #12d640;
+        color: #fff;
+      }
+
+      /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
+      #footer {
+        background: #0e1624;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      #footer h3 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+        padding: 0;
+        margin: 0 0 15px 0;
+      }
+
+      #footer p {
+        font-size: 15px;
+        padding: 0;
+        margin: 0 0 40px 0;
+      }
+
+      #footer .social-links {
+        margin: 0 0 40px 0;
+      }
+
+      #footer .copyright {
+        margin: 0 0 5px 0;
+      }
+    </style>
   </head>
 
-  <body id="page-top">
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-      id="sideNav"
-    >
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Zain Zahid</span>
-        <span class="d-none d-lg-block">
-          <img
-            class="img-fluid img-profile rounded-circle mx-auto mb-2"
-            src="images/about.png"
-            alt=""
-          />
-        </span>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience"
-              >Experience</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education"
-              >Education</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#certifications"
-              >Certifications</a
-            >
-          </li>
-        </ul>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header-tops">
+      <div class="container">
+        <h1><a href="index.html">Zain Zahid</a></h1>
+        <h2>
+          I'm a
+          <span class="typing" style="color: #12d640"
+            >Full Stack Developer</span
+          >
+        </h2>
+
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="social-links">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/zainzahid"
+            class="linkedin"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.github.com/zainzahid"
+            class="github"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        </div>
       </div>
-    </nav>
+    </header>
+    <!-- End Header -->
 
-    <div class="container-fluid p-0">
-      <section
-        class="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="about"
-      >
-        <div class="w-100">
-          <h1 class="mb-0">
-            Zain
-            <span class="text-primary">Zahid</span>
-          </h1>
-          <div class="subheading mb-5">
-            Full Stack Developer · +92 (303) 512 1973 ·
-            <a href="mailto:zahid.zain@hotmail.com">zahid.zain@hotmail.com</a>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row">
+          <!-- Profile Image -->
+          <div class="col-lg-2">
+            <div class="text-center">
+              <img
+                width="200"
+                src="assets/about.png"
+                class="img-fluid rounded-circle"
+                alt="Profile Image"
+              />
+            </div>
           </div>
-          <p class="lead mb-5">
-            Self-Motivated Full Stack engineer with over 3 years of experience
-            building full stack applications with software development
-            technologies such as Angular, Node.js, React MEAN/MERN Stack.
-            Graduated with a Bachelor of Science degree in Computer Science from
-            Air University Islamabad, Pakistan. Proven ability to adapt and
-            excel in both front-end and back-end development. Strong commitment
-            to delivering high-quality, scalable solutions.
-          </p>
-
-          <!-- <div class="subheading mb-5">
-            <a href="res/ZainZahid_Resume.pdf" target="_blank">Download Resume</a>
-        </div> -->
-
-          <div class="social-icons">
-            <a href="https://pk.linkedin.com/in/zainzahid">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/zainzahid">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
+          <div class="col-lg-10 pt-4 pt-lg-0 content">
+            <h3>Software Engineer</h3>
+            <p>
+              Full Stack Engineer with over 5 years of experience in diverse
+              work environments, including 2+ years of specialized expertise in
+              modern LLM applications and 4+ years generally in AI/ML.
+              Proficient in traditional full-stack technologies like Angular,
+              React.js, Node.js as well as developing AI-powered applications
+              using LangChain, LangGraph, Python and FastAPI. Adept at building
+              autonomous multi AI agents systems, implementing RAG
+              architectures, and optimizing AI workflows while maintaining
+              expertise in both front-end and back-end development. Skilled at
+              translating complex concepts for non-technical stakeholders and
+              delivering high-quality, scalable solutions while staying current
+              with emerging trends.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong>Location:</strong>
+                    <span>Islamabad, Pakistan</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
+                    <span>+92 319 462-1973</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                    <span>zainzahid.it@gmail.com</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong>Available:</strong> <span>Full Time</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- End About Section -->
 
-      <hr class="m-0" />
+    <!-- ======= Experience Section ======= -->
+    <section id="experience" class="resume">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+        </div>
 
-      <section
-        class="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="skills"
-      >
-        <div class="w-100">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="resume-item">
+              <h4>Full Stack AI Engineer</h4>
+              <h5>08/2023 - Present</h5>
+              <h6>
+                <b
+                  ><em
+                    >Turing - San Francisco, California, United States
+                    (Remote)</em
+                  ></b
+                >
+              </h6>
+              <ul>
+                <li>
+                  Working as a Lead Full Stack Engineer with Turing(a Silicon
+                  Valley startup, facilitates the hiring of senior pre-vetted
+                  remote developers for U.S. and Silicon Valley companies).
+                  Joined as a part of their rigorous pre-vetting process.
+                </li>
+                <li>
+                  Leading the active development of a robust 3PL Logistics
+                  platform and order fulfillment solution for high-growth
+                  e-commerce and retail ventures.
+                </li>
+                <li>
+                  Integrated AI agents for warehouse automation and inventory
+                  management using LangChain and LangGraph. Optimized order
+                  fulfillment workflows for high-growth e-commerce ventures,
+                  utilizing modern function calling techniques and LLM
+                  orchestration
+                </li>
+                <li>
+                  Implementing advanced RAG pipelines and hybrid search systems
+                  for efficient knowledge retrieval from operational logistics
+                  data using Pinecone vector database
+                </li>
+                <li>
+                  Designing and implementing dynamic front-end applications
+                  employing Angular core framework skills integrating key
+                  technologies such as RxJS, and Ngrx for state management,
+                  Reactive Form handling, observables, signals, modular
+                  architecture, PrimeNg & Angular Material for styling and
+                  utilized Firebase Auth for authentication ensuring seamless
+                  integration with back-end systems.
+                </li>
+                <li>
+                  Building robust Backend RESTful APIs using Node.js,
+                  Express.js, Typescript, and FastAPI for Python-based AI
+                  services adhering to industry best practices for scalability,
+                  performance, and integrating SQL in conjunction with Sequelize
+                  ORM for efficient database management, encompassing tasks like
+                  creating migrations, executing complex queries.
+                </li>
+                <li>
+                  Developing SPA's with React.js demonstrating proficiency in
+                  core React concepts including functional component-based
+                  architecture, form handling, event handling, routing, and
+                  animation. Utilized Redux/RTK for efficient state management
+                  while integrating Material UI for enhanced user interface
+                  experiences.
+                </li>
+                <li>
+                  Implemented Reinforcement Learning from Human Feedback (RLHF)
+                  for coding models, systematically evaluating and improving LLM
+                  responses to generate production-ready, high-quality code.
+                  Optimized model training pipelines and evaluation metrics to
+                  ensure consistent improvement in model outputs and reduced
+                  computational overhead.
+                </li>
+                <li>
+                  Implemented Supervised Fine-Tuning (SFT) techniques to enhance
+                  LLM model capabilities in specific domains and tasks,
+                  particularly focusing on tool calling and function calling
+                  with minimal hallucination.
+                </li>
+                <li>
+                  Proactively identifying opportunities for AI-driven
+                  performance enhancements while maintaining expertise in
+                  current LLM technologies and prompt engineering methodologies
+                  (Tree of Thoughts, Constitutional AI etc.)
+                </li>
+                <li>
+                  Diligently maintaining documentation for codebase and API's
+                  using tools like JSDocs and Swagger/OpenAPI for comprehensive
+                  understanding and seamless collaboration.
+                </li>
+                <li>
+                  Providing comprehensive training, guidance, and assistance to
+                  team members for the development of high-performance,
+                  low-latency applications.
+                </li>
+                <li>
+                  Worked on popular AWS cloud services such as EC2, ECS, S3 and
+                  serverless architecture(AWS Lambda).
+                </li>
+                <li>
+                  Creating and executing AI roadmaps that leverage the latest
+                  advancements in multi-model AI systems (text, numerical data,
+                  and structured documents) and industry specific models.
+                </li>
+                <li>
+                  Operating within an Agile and Scrum framework, ensuring
+                  streamlined project execution, contributing to sprint
+                  planning, daily stand-ups, and retrospective meetings.
+                </li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Full Stack Developer</h4>
+              <h5>05/2021 - 12/2023</h5>
+              <h6>
+                <b><em>Cloudtek Inc - Islamabad, Pakistan</em></b>
+              </h6>
+              <ul>
+                <li>
+                  I worked as Full-Stack Developer and also led the team of
+                  full-stack developers to deliver innovative solutions
+                  following agile methodology on different projects. I wore
+                  multiple hats and have worked on various projects in highly
+                  interdependent team structures
+                </li>
+                <li>
+                  Created new features, and capabilities for dynamic single-page
+                  applications(SPAs) web applications using
+                  Javascript/Typescript, and JS frameworks/libraries such as
+                  React/Next.js, Angular, Node.js.
+                </li>
+                <li>
+                  Designed and implemented robust REST and GraphQL
+                  architecture-based web services utilizing Node.js, Nest.js
+                  framework. MySQL and Sequelize.
+                </li>
+                <li>
+                  Designed and implemented AI workflow automation using n8n and
+                  Make.com to optimize existing business processes and create
+                  new automated workflows
+                </li>
+                <li>
+                  Successfully migrated a legacy Wordpress-based CMS, event
+                  management and marketing website to a modern JAM-stack
+                  application using React/Next.js on the front end, React Query
+                  for cache + state management, leveraged Atomic design
+                  principles, styled-components for encapsulated styling,
+                  improved component reusability backed by Wordpress REST API as
+                  a headless CMS.
+                </li>
+                <li>
+                  Designed and developed the MEAN Stack Application provides
+                  background checks with a Dynamic UX Management module that
+                  supports multiple themes/layouts and 11 different app versions
+                  utilizing Angular, Node.js, and MongoDB, along with Jasmine,
+                  Karma, and Jest for unit testing, Playwright for end-to-end
+                  testing, and Gitlab for source control and project management.
+                </li>
+                <li>
+                  Involved in all stages of Software Development Life Cycle
+                  (SDLC) including application design, development, debugging
+                  and testing the applications.
+                </li>
+                <li>
+                  Worked with the modern headless CMS such as Strapi, Keystone,
+                  Contentful
+                </li>
+                <li>
+                  Documented the codebase as well as technical and operational
+                  aspects of the projects.
+                </li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Software Engineer (MEAN Stack)</h4>
+              <h5>07/2019 - 04/2021</h5>
+              <h6>
+                <b><em>Locopixel Pvt Ltd - Islamabad, Pakistan</em></b>
+              </h6>
+              <ul>
+                <li>
+                  Developed, tested, and maintained single page applications
+                  using Angular, Typescript, Ngxs/Ngrx for managing state of
+                  applications and Angular Material for the frontend design.
+                </li>
+                <li>
+                  Worked on creating RESTful APIs for multiple applications
+                  using Node.js, Express, and MongoDB+Mongoose.
+                </li>
+                <li>
+                  Developed of MEAN stack-based web application and Ionic mobile
+                  app for the government of Punjab agriculture project, focused
+                  on monitoring, management, and farm land demarcation
+                </li>
+                <li>
+                  Worked on a logistics software solution for transportation
+                  management for a french company featuring a microservice
+                  architecture, utilizing Node.js, Angular, MySQL, and MongoDB
+                  for complete shipment tracking and management.
+                </li>
+                <li>
+                  Responsible for creating efficient design and developing user
+                  interactive screens using HTML, CSS3/SCSS.
+                </li>
+                <li>
+                  Practiced in Agile and Scrum methodologies, with a solid
+                  understanding of version control systems such as Git, and
+                  Project Management tools such as Jira, Asana, Gitlab.
+                </li>
+                <li>
+                  I was part of the core Development team which provided
+                  development support to various internal projects.
+                </li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Web Development Intern</h4>
+              <h5>07/2018 - 08/2018</h5>
+              <h6>
+                <b><em>International Cooperation Office, Air University</em></b>
+              </h6>
+              <ul>
+                <li>
+                  I developed a website and CMS for my university international
+                  corp office using ASP.NET MVC framework, SQL Server, ADO.NET,
+                  and implemented basic data analysis visualizations using
+                  Python libraries to display scholarship statistics and program
+                  metrics
+                </li>
+                <li>
+                  They are able to post all the news feeds, scholarships, and
+                  programs they offer through this website and maintain it using
+                  the CMS created for them.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Experience Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-title">
           <h2>Skills</h2>
+        </div>
 
-          <div class="container-fluid">
-            <div class="skills-list row">
-              <div class="skill-category col-sm-5">
-                <h3 class="section-subtitle">Back-End</h3>
-                <div class="list-wrapper">
-                  <div>
-                    <img
-                      src="images/node_expressjs.png"
-                      alt="Nodejs logo"
-                      class="responsive-img"
-                    />Node.js/Express.js
-                  </div>
-                  <div>
-                    <img
-                      src="images/rest.png"
-                      alt="Javascript logo"
-                      class="responsive-img"
-                    />RESTful API
-                  </div>
-                  <div>
-                    <img
-                      src="images/sql.png"
-                      alt="SQL logo"
-                      class="responsive-img"
-                    />SQL
-                  </div>
-                  <div>
-                    <img
-                      src="images/mongodb.png"
-                      alt="MongoDB logo"
-                      class="responsive-img"
-                    />MongoDB(Intermediate)
-                  </div>
-                  <div>
-                    <img
-                      src="images/aspnet.png"
-                      alt="ASP.NET MVC logo"
-                      class="responsive-img"
-                    />ASP.NET MVC
-                  </div>
-                </div>
-              </div>
-              <!--row1 end-->
-
-              <div class="skill-category col-sm-5">
-                <h3 class="section-subtitle">Front-End</h3>
-                <div class="list-wrapper">
-                  <div>
-                    <img
-                      src="images/angular.png"
-                      alt="Angular logo"
-                      class="responsive-img"
-                    />Angular
-                  </div>
-                  <div>
-                    <img
-                      src="images/reactjs.png"
-                      alt="React logo"
-                      class="responsive-img"
-                    />React.js
-                  </div>
-                  <div>
-                    <img
-                      src="images/htmlcss.png"
-                      alt="htmlcss logo"
-                      class="responsive-img"
-                    />HTML+CSS
-                  </div>
-                  <div>
-                    <img
-                      src="images/graphql.png"
-                      alt="graphql logo"
-                      class="responsive-img"
-                    />GraphQL
-                  </div>
-                  <div>
-                    <img
-                      src="images/ionic.png"
-                      width="220"
-                      height="100"
-                      alt="graphql logo"
-                      class="responsive-img"
-                    />
-                  </div>
-                  <!-- <div><img src="images/bootstrap.png" alt="bootstrap logo" class="responsive-img"></div> -->
-                </div>
-              </div>
-
-              <div class="skill-category col-sm-5">
-                <h3 class="section-subtitle">Programming Languages</h3>
-                <div class="list-wrapper">
-                  <div>
-                    <img
-                      src="images/javascript.png"
-                      alt="Javascript logo"
-                      class="responsive-img"
-                    />Javascript
-                  </div>
-                  <div>
-                    <img
-                      src="images/csharp.png"
-                      alt="C# Programming logo"
-                      class="responsive-img"
-                    />C#
-                  </div>
-
-                  <!-- <div><img src="images/php.png" alt="Php logo" class="responsive-img">Php(Intermediate)</div> -->
-
-                  <div>
-                    <img
-                      src="images/python.png"
-                      alt="Python Programming logo"
-                      class="responsive-img"
-                    />Python(Beginner)
-                  </div>
-                </div>
-              </div>
-
-              <div class="skill-category col-sm-5">
-                <h3 class="section-subtitle">Others</h3>
-                <div class="list-wrapper">
-                  <div>
-                    <img
-                      src="images/github.png"
-                      alt="github logo"
-                      class="responsive-img"
-                    />Github
-                  </div>
-                  <div>
-                    <img
-                      src="images/android.png"
-                      alt="Android logo"
-                      class="responsive-img"
-                    />Native Android(Beginner)
-                  </div>
-                  <!-- <div><img src="images/powerbi.png" alt="Power BI logo" class="responsive-img">Power BI</div> -->
-                  <div>
-                    <img
-                      src="images/testing.png"
-                      alt="Testing logo"
-                      class="responsive-img"
-                    />Unit Testing
-                  </div>
-                </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="skill-group">
+              <h3>Core Technologies</h3>
+              <div>
+                <span class="skill-item">Javascript (ES6+)</span>
+                <span class="skill-item">Typescript</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Angular</span>
+                <span class="skill-item">React.js</span>
+                <span class="skill-item">Next.js (SSR, SSG)</span>
+                <span class="skill-item"
+                  >HTML & CSS (SCSS, Styled Components, Tailwind)</span
+                >
+                <span class="skill-item"
+                  >Node.js (Express.js, Nest.js, Fastify)</span
+                >
+                <span class="skill-item">Vue.js</span>
+                <span class="skill-item"
+                  >State Management (Ngxs, Ngrx, Redux/RTK)</span
+                >
+                <span class="skill-item">C#, ASP.NET MVC/Web API's</span>
               </div>
             </div>
-            <!--this one-->
+
+            <div class="skill-group">
+              <h3>Database & APIs</h3>
+              <div>
+                <span class="skill-item"
+                  >SQL (MySQL, PostgreSQL, Sequelize ORM)</span
+                >
+                <span class="skill-item">MongoDB (Mongoose)</span>
+                <span class="skill-item">RESTful APIs</span>
+                <span class="skill-item">GraphQL</span>
+                <span class="skill-item">Agile and Scrum Methodology</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>AI & Machine Learning</h3>
+              <div>
+                <span class="skill-item"
+                  >AI Agents: LangChain, LangGraph, CrewAI, PhiData</span
+                >
+                <span class="skill-item"
+                  >Workflow Automation: n8n, Make.com</span
+                >
+                <span class="skill-item"
+                  >Data Domain - NumPy, Pandas, Seaborn, StreamLit</span
+                >
+                <span class="skill-item"
+                  >RAG, Prompt Engineering, Function/Tool Calling</span
+                >
+                <span class="skill-item">LLM Fine Tuning (SFT, RLHF)</span>
+                <span class="skill-item"
+                  >Vector Databases: Pinecone, ChromaDB, PgVector</span
+                >
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Testing & Development</h3>
+              <div>
+                <span class="skill-item"
+                  >Unit Testing (Jest, Jasmine, Karma)</span
+                >
+                <span class="skill-item"
+                  >ReactNative, Ionic Mobile Application Development</span
+                >
+                <span class="skill-item"
+                  >Authentication (JWT, OAuth. FirebaseAuth)</span
+                >
+                <span class="skill-item"
+                  >E2E Automation Testing (Cypress, Playwright)</span
+                >
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Cloud & DevOps</h3>
+              <div>
+                <span class="skill-item">AWS (Lambda, EC2, S3)</span>
+                <span class="skill-item">Azure(VMs,BlobStorage)</span>
+                <span class="skill-item"
+                  >Git, Docker & Linux (Administration, Deployments, Shell
+                  Scripts, Docker Containers)</span
+                >
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- End Skills Section -->
 
-      <hr class="m-0" />
+    <!-- ======= Education Section ======= -->
+    <section id="education" class="resume">
+      <div class="container">
+        <div class="section-title">
+          <h2>Education</h2>
+        </div>
 
-      <!--experience-->
-
-      <section
-        class="resume-section p-3 p-lg-5 d-flex justify-content-center"
-        id="experience"
-      >
-        <div class="w-100">
-          <h2 class="mb-5">Experience</h2>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">Full Stack Developer</h3>
-              <div class="subheading mb-3">
-                Cloudtek Inc - Islamabad Pakistan
-              </div>
-              <ul>
-                <li>
-                  <p>
-                    Working closely with clients and leading the team of full-stack 
-                    developers to deliver innovative solutions.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Worked on developing MEAN Stack Application provides background checks with a Dynamic UX Management module that
-                    supports multiple themes/layouts and app versions Utilizing Angular, Node.js, and MongoDB, along with Jasmine,
-                    Karma, and Jest for unit testing, Playwright for end-to-end testing, and Gitlab for source control and project
-                    management.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Worked on React + Next.js Project. Successfully migrated a legacy Wordpress-based CMS to a modern JAM-stack
-                    application using Wordpress REST API as a headless CMS, Next.js on the front end, and React Query for cache and
-                    state management.
-                  </p>
-                </li> 
-              </ul>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">May 2021 - Present</span>
-            </div>
-          </div>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">Software Engineer</h3>
-              <div class="subheading mb-3">
-                Locopixel Pvt Ltd - Islamabad, Pakistan
-              </div>
-              <ul>
-                <li>
-                  <p>
-                    Worked on MEAN stack-based web application and Ionic mobile app for
-                    the .govt. of Punjab agriculture project. Developed
-                    a solution for complete agriculture internees tracking,
-                    monitoring, govt. recommended crop plans/advisory system,
-                    tasks allocations and gis-based markation module to
-                    demarcate more than 40k acres of land.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Contributed to the design and development of a logistics
-                    software project featuring a microservice architecture,
-                    utilizing Node.js, Angular, MySQL, and MongoDB for complete
-                    shipment tracking and management.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Involved in complete software development life cycle from
-                    requirement gathering to application in production.
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Jul 2019 - Dec 2020</span>
-            </div>
-          </div>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">Web Development Intern</h3>
-              <div class="subheading mb-3">
-                International Cooperation Office, Air University - Islamabad
-                Pakistan
-              </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="resume-item">
+              <h4>Bachelor of Science: Computer Science</h4>
+              <h5>2015-2019</h5>
+              <h6>
+                <b><em>Air University - Islamabad</em></b>
+              </h6>
               <p>
-                Developed content management web application using ASP.NET MVC
-                framework, Sql Server and ADO.NET.
+                I've gained a strong understanding of the computer science and
+                programming fundamentals, mastering essential concepts
+                including:
+              </p>
+              <ul>
+                <li>
+                  <strong>Data Structures and Algorithms:</strong> I delved into
+                  details of data structures and algorithmic problem-solving,
+                  developing critical problem-solving skills that continue to
+                  serve me in my career.
+                </li>
+                <li>
+                  <strong>Object-Oriented Programming (OOP):</strong> I gained
+                  expertise in designing and implementing efficient, modular,
+                  and maintainable code using OOP principles.
+                </li>
+                <li>
+                  <strong>Database Design:</strong> I refined my skills in
+                  database design. This skill has been super useful when working
+                  with different database systems.
+                </li>
+                <li>
+                  <strong>Design Principles and Patterns:</strong> I learned to
+                  design scalable, maintainable software systems by applying
+                  design principles and design patterns, fostering software
+                  craftsmanship.
+                </li>
+                <li>
+                  <strong>Electives and Projects:</strong> I've expanded my
+                  abilities by taking elective courses in web development and
+                  machine learning, broadening my skill set.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Education Section -->
+
+    <!-- ======= Awards Section ======= -->
+    <section id="awards" class="resume">
+      <div class="container">
+        <div class="section-title">
+          <h2>Awards</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="resume-item">
+              <h4>Best Team Player Award</h4>
+              <h5>Dec 2021</h5>
+              <h6>
+                <b><em>Cloudtek Inc</em></b>
+              </h6>
+              <p>
+                <a href="https://bit.ly/3MuxbIH" target="_blank">View</a>
               </p>
             </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Jul 2018 - Aug 2018</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Awards Section -->
+
+    <!-- ======= Certifications Section ======= -->
+    <section id="certifications" class="resume">
+      <div class="container">
+        <div class="section-title">
+          <h2>Certifications</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="resume-item">
+              <h4>Introduction to Machine Learning</h4>
+              <h5>Feb 2019</h5>
+              <h6>
+                <b><em>Datacamp</em></b>
+              </h6>
+              <p>
+                <a href="https://bit.ly/35j7IBe" target="_blank"
+                  >View Certificate</a
+                >
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Python Fundamentals (Skill Track)</h4>
+              <h5>June 2019</h5>
+              <h6>
+                <b><em>Datacamp</em></b>
+              </h6>
+              <p>
+                <a href="http://bit.ly/3PRj6XT" target="_blank"
+                  >View Certificate</a
+                >
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- End Certifications Section -->
 
-      <!--//experience-->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
 
-      <hr class="m-0" />
-
-      <!--education-->
-
-      <section
-        class="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="education"
-      >
-        <div class="w-100">
-          <h2 class="mb-5">Education</h2>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">
-                Bachelors of Science in Computer Science · BS(CS)
-              </h3>
-              <div class="subheading mb-3">
-                Air University Islamabad, Pakistan
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="info">
+                  <div class="address">
+                    <i class="bi bi-geo-alt"></i>
+                    <h4>Location:</h4>
+                    <p>Islamabad, Pakistan</p>
+                  </div>
+                </div>
               </div>
-              <p>GPA: 3.38</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2015 - 2019</span>
-            </div>
-          </div>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">Higher Secondary School Certificate(HSSC)</h3>
-              <div class="subheading mb-3">
-                Federal Board of Intermediate and Secondary Education (FBISE)
-                Islamabad, Pakistan
+              <div class="col-md-4">
+                <div class="info">
+                  <div class="email">
+                    <i class="bi bi-envelope"></i>
+                    <h4>Email:</h4>
+                    <p>zainzahid.it@gmail.com</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">2013 - 2015</span>
+              <div class="col-md-4">
+                <div class="info">
+                  <div class="phone">
+                    <i class="bi bi-phone"></i>
+                    <h4>Call:</h4>
+                    <p>+92 319 462-1973</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <!-- End Contact Section -->
 
-      <!--//education-->
-
-      <hr class="m-0" />
-
-      <!--//experience-->
-
-      <hr class="m-0" />
-
-      <!--certifications-->
-
-      <section
-        class="resume-section p-3 p-lg-5 d-flex align-items-center"
-        id="certifications"
-      >
-        <div class="w-100">
-          <h2 class="mb-5">CERTIFICATIONS AND AWARDS</h2>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">Best Team Player Award</h3>
-              <div class="subheading mb-3">
-                Issued by Cloudtek Inc · Islamabad (<a
-                  href="images/btp-award.jpg"
-                  target="_blank"
-                >
-                  View</a
-                >)
-              </div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">December 2021</span>
-            </div>
-          </div>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">Introduction to Machine Learning</h3>
-              <div class="subheading mb-3">
-                ISSUED BY DataCamp (<a
-                  href="https://www.datacamp.com/statement-of-accomplishment/course/8de46ef212bfb887972b21be8ab87bbd5d87c314"
-                  target="_blank"
-                >
-                  View </a
-                >)
-              </div>
-              <!-- <p>GPA: 3.38</p> -->
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Dec 18 - Feb 19</span>
-            </div>
-          </div>
-
-          <div
-            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-          >
-            <div class="resume-content">
-              <h3 class="mb-0">Python Fundamentals (Skill Track)</h3>
-              <div class="subheading mb-3">
-                ISSUED BY DataCamp (<a
-                  href="https://www.datacamp.com/statement-of-accomplishment/track/26fa785005d7389711391aea5653a005eaf1d21e"
-                  target="_blank"
-                >
-                  View </a
-                >)
-              </div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Mar 19 - Jun 19</span>
-            </div>
-          </div>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <h3>Zain Zahid</h3>
+        <p>Software Engineer with expertise in full-stack development and AI</p>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/zainzahid"
+            target="_blank"
+            class="linkedin"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            href="https://www.github.com/zainzahid"
+            target="_blank"
+            class="github"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         </div>
-      </section>
+        <div class="copyright">
+          &copy; Copyright <strong><span>Zain Zahid</span></strong
+          >. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
 
-      <!--//certifications-->
+    <!-- Vendor JS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
-      <hr class="m-0" />
-    </div>
+    <!-- Main JS File -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Typing animation
+        const typed = new Typed(".typing", {
+          strings: [
+            "Software Engineer",
+            "Full Stack Developer",
+            "AI Expert",
+            "React | Angular | Node.js | Python Expert",
+          ],
+          loop: true,
+          typeSpeed: 80,
+          backSpeed: 40,
+          backDelay: 1500,
+        });
 
-    <!--ResponsiveTabs-->
-    <script src="js/easyResponsiveT.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#horizontalTab").easyResponsiveTabs({
-          type: "default", //Types: default, vertical, accordion
-          width: "auto", //auto or any width like 600px
-          fit: true, // 100% fit in a container
+        // Smooth scroll for links with hash
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+
+        // Active navigation on scroll
+        const navLinks = document.querySelectorAll(".nav-menu a");
+        const sections = document.querySelectorAll("section");
+
+        window.addEventListener("scroll", () => {
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 200) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
         });
       });
     </script>
-    <!--//ResponsiveTabs-->
-    <!-- swipe box js -->
-    <script src="js/jquery.swipebox.min.js"></script>
-    <script type="text/javascript">
-      jQuery(function ($) {
-        $(".swipebox").swipebox();
-      });
-    </script>
-    <!-- //swipe box js -->
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   </body>
 </html>
