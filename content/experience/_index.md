@@ -9,16 +9,16 @@ jobs:
       - "Working as a Lead Full Stack Engineer with Turing(a Silicon Valley startup, facilitates the hiring of senior pre-vetted remote developers for U.S. and Silicon Valley companies). Joined as a part of their rigorous pre-vetting process."
       - "Leading the active development of a robust 3PL Logistics platform and order fulfillment solution for high-growth e-commerce and retail ventures."
       - "Integrated AI agents for warehouse automation and inventory management using LangChain and LangGraph. Optimized order fulfillment workflows for high-growth e-commerce ventures, utilizing modern function calling techniques and LLM orchestration"
+      - "Designed and implemented a frontend Angular application for a 3PL logistics platform, leveraging RxJS, NgRx, Reactive Forms, Signals, PrimeNG, Angular Material, and Firebase Authentication to deliver responsive user experiences with seamless backend integration."
+      - "Developed scalable backend RESTful APIs for the logistics platform using Node.js, Express.js, TypeScript, and FastAPI to power warehouse operations, inventory management, order processing, and AI-driven automation. Designed SQL database schemas with Sequelize ORM, created database migrations, optimized complex queries, and built high-performance services following scalable backend architecture best practices."
       - "Implementing advanced RAG pipelines and hybrid search systems for efficient knowledge retrieval from operational logistics data using Pinecone vector database"
-      - "Designing and implementing dynamic front-end applications employing Angular core framework skills integrating key technologies such as RxJS, and Ngrx for state management, Reactive Form handling, observables, signals, modular architecture, PrimeNg & Angular Material for styling and utilized Firebase Auth for authentication ensuring seamless integration with back-end systems."
-      - "Building robust Backend RESTful APIs using Node.js, Express.js, Typescript, and FastAPI for Python-based AI services adhering to industry best practices for scalability, performance, and integrating SQL in conjunction with Sequelize ORM for efficient database management, encompassing tasks like creating migrations, executing complex queries."
-      - "Developing SPA's with React.js demonstrating proficiency in core React concepts including functional component-based architecture, form handling, event handling, routing, and animation. Utilized Redux/RTK for efficient state management while integrating Material UI for enhanced user interface experiences."
+      - "Built React.js single-page applications for Turing’s internal operational tools and AI workflows, leveraging functional components, React Router, Redux Toolkit, Material UI, and modern state management patterns to deliver responsive interfaces integrated with backend APIs."
       - "Implemented Reinforcement Learning from Human Feedback (RLHF) for coding models, systematically evaluating and improving LLM responses to generate production-ready, high-quality code. Optimized model training pipelines and evaluation metrics to ensure consistent improvement in model outputs and reduced computational overhead."
       - "Implemented Supervised Fine-Tuning (SFT) techniques to enhance LLM model capabilities in specific domains and tasks, particularly focusing on tool calling and function calling with minimal hallucination."
       - "Proactively identifying opportunities for AI-driven performance enhancements while maintaining expertise in current LLM technologies and prompt engineering methodologies (Tree of Thoughts, Constitutional AI etc.)"
       - "Diligently maintaining documentation for codebase and API's using tools like JSDocs and Swagger/OpenAPI for comprehensive understanding and seamless collaboration."
       - "Providing comprehensive training, guidance, and assistance to team members for the development of high-performance, low-latency applications."
-      - "Worked on popular AWS cloud services such as EC2, ECS, S3 and serverless architecture(AWS Lambda)."
+      - "Managed AWS infrastructure for a logistics platform using EC2, ECS, S3, and AWS Lambda, supporting scalable application deployment, backend services, and reliable data processing."
       - "Creating and executing AI roadmaps that leverage the latest advancements in multi-model AI systems (text, numerical data, and structured documents) and industry specific models."
       - "Operating within an Agile and Scrum framework, ensuring streamlined project execution, contributing to sprint planning, daily stand-ups, and retrospective meetings."
 
@@ -27,14 +27,11 @@ jobs:
     company: "Cloudtek Inc"
     location: "Islamabad, Pakistan"
     responsibilities:
-      - "I worked as Full-Stack Developer and also led the team of full-stack developers to deliver innovative solutions following agile methodology on different projects. I wore multiple hats and have worked on various projects in highly interdependent team structures"
-      - "Created new features, and capabilities for dynamic single-page applications(SPAs) web applications using Javascript/Typescript, and JS frameworks/libraries such as React/Next.js, Angular, Node.js."
-      - "Designed and implemented robust REST and GraphQL architecture-based web services utilizing Node.js, Nest.js framework. MySQL and Sequelize."
-      - "Designed and implemented AI workflow automation using n8n and Make.com to optimize existing business processes and create new automated workflows"
-      - "Successfully migrated a legacy Wordpress-based CMS, event management and marketing website to a modern JAM-stack application using React/Next.js on the front end, React Query for cache + state management, leveraged Atomic design principles, styled-components for encapsulated styling, improved component reusability backed by Wordpress REST API as a headless CMS."
-      - "Designed and developed the MEAN Stack Application provides background checks with a Dynamic UX Management module that supports multiple themes/layouts and 11 different app versions utilizing Angular, Node.js, and MongoDB, along with Jasmine, Karma, and Jest for unit testing, Playwright for end-to-end testing, and Gitlab for source control and project management."
+      - "Designed and developed a MEAN stack background check application with a Dynamic UX Management module supporting multiple themes, layouts, and 11 application versions using Angular, Node.js, MongoDB, Nest.js, MySQL, and Sequelize. Implemented REST APIs, automated testing with Jasmine, Karma, Jest, and Playwright, and managed source control and project workflows through GitLab."
+      - "Successfully migrated a legacy WordPress-based CMS, event management, and marketing website into a modern JAMstack application using React/Next.js, React Query for cache and state management, styled-components, and Atomic Design principles. Built reusable components and integrated WordPress REST API as a headless CMS to deliver a scalable content-driven platform."
+      - "Integrated and maintained headless CMS solutions including Strapi, Keystone, and Contentful across marketing and web applications, enabling flexible content management through API-driven architectures."
+      - "Built AI-powered workflow automations for internal Cloudtek operations using n8n and Make.com, streamlining repetitive business processes and improving operational efficiency through automated integrations."
       - "Involved in all stages of Software Development Life Cycle (SDLC) including application design, development, debugging and testing the applications."
-      - "Worked with the modern headless CMS such as Strapi, Keystone, Contentful"
       - "Documented the codebase as well as technical and operational aspects of the projects."
 
   - title: "Software Engineer (MEAN Stack)"
@@ -42,11 +39,8 @@ jobs:
     company: "Locopixel Pvt Ltd"
     location: "Islamabad, Pakistan"
     responsibilities:
-      - "Developed, tested, and maintained single page applications using Angular, Typescript, Ngxs/Ngrx for managing state of applications and Angular Material for the frontend design."
-      - "Worked on creating RESTful APIs for multiple applications using Node.js, Express, and MongoDB+Mongoose."
-      - "Developed of MEAN stack-based web application and Ionic mobile app for the government of Punjab agriculture project, focused on monitoring, management, and farm land demarcation"
-      - "Worked on a logistics software solution for transportation management for a french company featuring a microservice architecture, utilizing Node.js, Angular, MySQL, and MongoDB for complete shipment tracking and management."
-      - "Responsible for creating efficient design and developing user interactive screens using HTML, CSS3/SCSS."
+      - "Developed a MEAN stack-based web application and Ionic mobile app for the Government of Punjab agriculture project, focused on farm monitoring, management, and farmland demarcation. Built responsive user interfaces using Angular, TypeScript, Angular Material, HTML, CSS3/SCSS, and implemented state management using NgRx/Ngxs. Developed RESTful APIs with Node.js, Express, and MongoDB/Mongoose to support application workflows."
+      - "Worked on a logistics software solution for a French transportation company featuring a microservice architecture for shipment tracking and management. Developed scalable frontend modules using Angular and TypeScript, built backend services with Node.js, Express, MySQL, and MongoDB, and designed RESTful APIs to support transportation management workflows."
       - "Practiced in Agile and Scrum methodologies, with a solid understanding of version control systems such as Git, and Project Management tools such as Jira, Asana, Gitlab."
       - "I was part of the core Development team which provided development support to various internal projects."
 
@@ -56,7 +50,7 @@ jobs:
     location: "Islamabad, Pakistan"
     responsibilities:
       - "I developed a website and CMS for my university international corp office using ASP.NET MVC framework, SQL Server, ADO.NET, and implemented basic data analysis visualizations using Python libraries to display scholarship statistics and program metrics"
-      - "They are able to post all the news feeds, scholarships, and programs they offer through this website and maintain it using the CMS created for them."
+      - "The website enabled the department to post all the news feeds, scholarships, and programs they offer through this website and maintain it using the CMS created for them."
 ---
 
 This section showcases my professional experience across various roles and companies, highlighting my growth from a web development intern to a full stack AI engineer.
