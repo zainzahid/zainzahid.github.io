@@ -45,12 +45,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Configure Pages to use GitHub Actions
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh api --method PUT "repos/${{ github.repository }}/pages" -f build_type=workflow 2>/dev/null || \
-          gh api --method POST "repos/${{ github.repository }}/pages" -f build_type=workflow
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
