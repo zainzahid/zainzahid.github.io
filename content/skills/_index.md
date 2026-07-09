@@ -9,7 +9,7 @@ skill_groups:
       - "Angular"
       - "React.js"
       - "Next.js (SSR, SSG)"
-      - "React Native, Ionic Mobile Application Development"
+      - "React Native, Ionic Mobile App Development"
       - "HTML & CSS (SCSS, Styled Components, Tailwind)"
       - "Node.js (Express.js, Nest.js, Fastify)"
       - "Vue.js"
