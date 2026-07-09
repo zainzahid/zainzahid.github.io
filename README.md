@@ -8,7 +8,7 @@ Personal portfolio website built with [Hugo](https://gohugo.io/) - a fast and mo
 
 ## About
 
-This is the personal portfolio website of Zain Zahid, a Full Stack AI Engineer with over 5 years of experience in diverse work environments. The site showcases experience, skills, education, awards, and certifications.
+This is the personal portfolio website of Zain Zahid, a Full Stack AI Engineer with over 7 years of experience in diverse work environments. The site showcases experience, skills, education, awards, and certifications.
 
 ## Tech Stack
 
