@@ -9,6 +9,7 @@ skill_groups:
       - "Angular"
       - "React.js"
       - "Next.js (SSR, SSG)"
+      - "React Native, Ionic Mobile Application Development"
       - "HTML & CSS (SCSS, Styled Components, Tailwind)"
       - "Node.js (Express.js, Nest.js, Fastify)"
       - "Vue.js"
@@ -35,7 +36,6 @@ skill_groups:
   - name: "Testing & Development"
     skills:
       - "Unit Testing (Jest, Jasmine, Karma)"
-      - "ReactNative, Ionic Mobile Application Development"
       - "Authentication (JWT, OAuth. FirebaseAuth)"
       - "E2E Automation Testing (Cypress, Playwright)"
 

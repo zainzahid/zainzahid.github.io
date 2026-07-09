@@ -1,0 +1,139 @@
+<div class="projects-grid">
+  {{ range $index, $project := .Params.projects }}
+  <article
+    class="project-card"
+    data-project-index="{{ $index }}"
+    tabindex="0"
+    role="button"
+    aria-label="View {{ $project.name }} project details"
+  >
+    <div class="project-card-image{{ with $project.image_orientation }} is-{{ . }}{{ end }}">
+      <img
+        src="{{ index $project.screenshots 0 | relURL }}"
+        alt="{{ $project.name }} screenshot"
+        loading="lazy"
+      />
+      <div class="project-card-overlay">
+        <span class="project-card-cta">
+          <i class="bi bi-arrow-up-right"></i> View Project
+        </span>
+      </div>
+    </div>
+    <div class="project-card-body">
+      <h3>{{ $project.name }}</h3>
+      <p>{{ $project.short_description }}</p>
+      <div class="project-card-tags">
+        {{ range first 4 $project.technologies }}
+        <span class="project-tag">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+  </article>
+  {{ end }}
+</div>
+
+<div
+  class="modal fade project-modal"
+  id="projectModal"
+  tabindex="-1"
+  aria-labelledby="projectModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="projectModalLabel"></h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        {{ range $index, $project := .Params.projects }}
+        <div
+          class="project-modal-panel{{ if eq $index 0 }} active{{ end }}"
+          data-project-panel="{{ $index }}"
+          {{ if ne $index 0 }}hidden{{ end }}
+        >
+          <div class="project-modal-layout">
+            <div class="project-modal-gallery">
+              <div
+                class="project-gallery"
+                data-gallery-index="{{ $index }}"
+                data-slide-count="{{ len $project.screenshots }}"
+              >
+                <div class="project-gallery-viewport">
+                  {{ range $slideIndex, $screenshot := $project.screenshots }}
+                  <div class="project-gallery-slide{{ if eq $slideIndex 0 }} active{{ end }}{{ with $project.image_orientation }} is-{{ . }}{{ end }}">
+                    <img
+                      src="{{ $screenshot | relURL }}"
+                      alt="{{ $project.name }} screenshot {{ add $slideIndex 1 }}"
+                    />
+                  </div>
+                  {{ end }}
+                </div>
+                {{ if gt (len $project.screenshots) 1 }}
+                <button
+                  class="project-gallery-nav project-gallery-prev"
+                  type="button"
+                  aria-label="Previous screenshot"
+                >
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button
+                  class="project-gallery-nav project-gallery-next"
+                  type="button"
+                  aria-label="Next screenshot"
+                >
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+                {{ end }}
+              </div>
+              {{ if gt (len $project.screenshots) 1 }}
+              <div class="project-modal-thumbs">
+                {{ range $thumbIndex, $screenshot := $project.screenshots }}
+                <button
+                  type="button"
+                  class="project-modal-thumb{{ if eq $thumbIndex 0 }} active{{ end }}{{ with $project.image_orientation }} is-{{ . }}{{ end }}"
+                  data-slide-index="{{ $thumbIndex }}"
+                  aria-label="View screenshot {{ add $thumbIndex 1 }}"
+                >
+                  <img src="{{ $screenshot | relURL }}" alt="" />
+                </button>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+            <div class="project-modal-details">
+              <p class="project-modal-description">{{ $project.short_description }}</p>
+              <div class="project-modal-tags">
+                {{ range $project.technologies }}
+                <span class="project-tag">{{ . }}</span>
+                {{ end }}
+              </div>
+              <h4>Key Contributions</h4>
+              <ul class="project-modal-highlights">
+                {{ range $project.highlights }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+              {{ if $project.url }}
+              <a
+                class="project-modal-link"
+                href="{{ $project.url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi bi-box-arrow-up-right"></i> Visit Live Site
+              </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

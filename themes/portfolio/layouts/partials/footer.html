@@ -47,5 +47,132 @@
         }
       });
     });
+
+    // Projects modal
+    const projectModalEl = document.getElementById("projectModal");
+    if (projectModalEl) {
+      const modal = new bootstrap.Modal(projectModalEl);
+      const panels = document.querySelectorAll(".project-modal-panel");
+      const modalTitle = document.getElementById("projectModalLabel");
+
+      function applyImageOrientation(img) {
+        const setOrientation = () => {
+          if (!img.naturalWidth) return;
+
+          const isPortrait = img.naturalHeight > img.naturalWidth;
+          const frame = img.closest(
+            ".project-card-image, .project-gallery-slide, .project-modal-thumb"
+          );
+
+          if (frame) {
+            frame.classList.toggle("is-portrait", isPortrait);
+            frame.classList.toggle("is-landscape", !isPortrait);
+          }
+        };
+
+        if (img.complete) {
+          setOrientation();
+        } else {
+          img.addEventListener("load", setOrientation, { once: true });
+        }
+      }
+
+      document
+        .querySelectorAll(
+          ".project-card-image img, .project-gallery-slide img, .project-modal-thumb img"
+        )
+        .forEach(applyImageOrientation);
+
+      function setGallerySlide(gallery, slideIndex) {
+        const slideCount = Number(gallery.dataset.slideCount);
+        if (!slideCount) return;
+
+        const index =
+          ((slideIndex % slideCount) + slideCount) % slideCount;
+        const panel = gallery.closest(".project-modal-panel");
+
+        gallery.dataset.currentSlide = index;
+        gallery.querySelectorAll(".project-gallery-slide").forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+
+        if (panel) {
+          panel.querySelectorAll(".project-modal-thumb").forEach((thumb, i) => {
+            thumb.classList.toggle("active", i === index);
+          });
+        }
+      }
+
+      function resetGallery(panel) {
+        const gallery = panel.querySelector(".project-gallery");
+        if (gallery) {
+          setGallerySlide(gallery, 0);
+        }
+      }
+
+      function openProject(index) {
+        const card = document.querySelector(
+          `.project-card[data-project-index="${index}"]`
+        );
+        if (!card) return;
+
+        modalTitle.textContent = card.querySelector("h3").textContent;
+
+        panels.forEach((panel) => {
+          const isActive = Number(panel.dataset.projectPanel) === index;
+          panel.hidden = !isActive;
+          panel.classList.toggle("active", isActive);
+          if (isActive) {
+            resetGallery(panel);
+          }
+        });
+
+        modal.show();
+      }
+
+      document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("click", () =>
+          openProject(Number(card.dataset.projectIndex))
+        );
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openProject(Number(card.dataset.projectIndex));
+          }
+        });
+      });
+
+      projectModalEl.querySelectorAll(".project-gallery").forEach((gallery) => {
+        const prevBtn = gallery.querySelector(".project-gallery-prev");
+        const nextBtn = gallery.querySelector(".project-gallery-next");
+
+        if (prevBtn) {
+          prevBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const current = Number(gallery.dataset.currentSlide || 0);
+            setGallerySlide(gallery, current - 1);
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const current = Number(gallery.dataset.currentSlide || 0);
+            setGallerySlide(gallery, current + 1);
+          });
+        }
+      });
+
+      projectModalEl.querySelectorAll(".project-modal-thumb").forEach((thumb) => {
+        thumb.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const panel = thumb.closest(".project-modal-panel");
+          const gallery = panel.querySelector(".project-gallery");
+          if (gallery) {
+            setGallerySlide(gallery, Number(thumb.dataset.slideIndex));
+          }
+        });
+      });
+    }
   });
 </script>

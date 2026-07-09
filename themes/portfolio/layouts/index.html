@@ -48,6 +48,24 @@
     {{ end }}
     <!-- End Skills Section -->
 
+    <!-- ======= Projects Section ======= -->
+    {{ with .Site.GetPage "/projects" }}
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>Selected work across logistics, mobile, enterprise web, and government platforms</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            {{ partial "projects.html" . }}
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ end }}
+    <!-- End Projects Section -->
+
     <!-- ======= Education Section ======= -->
     {{ with .Site.GetPage "/education" }}
     <section id="education" class="resume">
