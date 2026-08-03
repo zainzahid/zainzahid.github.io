@@ -5,6 +5,7 @@
   @font-face {
     font-family: "Space Grotesk";
     src: url("{{ "assets/SpaceGrotesk.ttf" | relURL }}") format("truetype");
+    font-weight: 300 700;
     font-display: swap;
   }
   body {
@@ -20,6 +21,11 @@
   h5,
   h6 {
     font-family: "Space Grotesk", sans-serif;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   a {
@@ -32,19 +38,49 @@
     text-decoration: none;
   }
 
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid #12d640;
+    outline-offset: 3px;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -60px;
+    left: 12px;
+    z-index: 1100;
+    background: #0e1624;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 12px;
+    color: #fff;
+  }
+
+  .typing-accent {
+    color: #12d640;
+  }
+
   /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
   .header-tops {
     background: #0e1624;
-    padding: 80px 0;
+    padding: 76px 0 88px;
     text-align: center;
     color: #fff;
   }
 
   .header-tops h1 {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
   .header-tops h1 a {
@@ -113,7 +149,7 @@
 # Sections General
 --------------------------------------------------------------*/
   section {
-    padding: 60px 0;
+    padding: 58px 0 68px;
     overflow: hidden;
   }
 
@@ -125,6 +161,7 @@
   .section-title h2 {
     font-size: 32px;
     font-weight: bold;
+    letter-spacing: -0.01em;
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
@@ -160,6 +197,8 @@
 
   .about .content p {
     margin-bottom: 20px;
+    max-width: 68ch;
+    line-height: 1.7;
   }
 
   .about .content .icon-box {
@@ -247,11 +286,18 @@
     padding: 10px 15px;
     margin-bottom: 15px;
     background: #f8f9fa;
+    border: 1px solid transparent;
     border-radius: 5px;
     display: inline-block;
     font-weight: 600;
     color: #0e1624;
     font-size: 14px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .skills .skill-item:hover {
+    border-color: rgba(18, 214, 64, 0.4);
+    transform: translateY(-2px);
   }
 
   .skill-group {
@@ -657,7 +703,13 @@
     padding: 30px;
     background: #fff;
     width: 100%;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 24px 0 rgba(14, 22, 36, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .contact .info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px 0 rgba(14, 22, 36, 0.14);
   }
 
   .contact .info i {

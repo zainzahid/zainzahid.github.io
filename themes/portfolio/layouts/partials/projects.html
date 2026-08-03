@@ -100,7 +100,10 @@
                   data-slide-index="{{ $thumbIndex }}"
                   aria-label="View screenshot {{ add $thumbIndex 1 }}"
                 >
-                  <img src="{{ $screenshot | relURL }}" alt="" />
+                  <img
+                    src="{{ $screenshot | relURL }}"
+                    alt="{{ $project.name }} screenshot {{ add $thumbIndex 1 }} thumbnail"
+                  />
                 </button>
                 {{ end }}
               </div>

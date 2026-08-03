@@ -4,12 +4,26 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
+    {{ $description := .Site.Params.description }}
+    {{ with .Site.GetPage "/about" }}{{ if not $description }}{{ $description = .Params.description }}{{ end }}{{ end }}
+
     <title>{{ .Site.Title }}</title>
-    <meta content="{{ .Site.Params.description }}" name="description" />
+    <meta content="{{ $description }}" name="description" />
     <meta content="{{ .Site.Params.keywords }}" name="keywords" />
 
+    <!-- Social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta property="og:description" content="{{ $description }}" />
+    <meta property="og:image" content="{{ "assets/about.png" | absURL }}" />
+    <meta property="og:url" content="{{ .Site.BaseURL }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:description" content="{{ $description }}" />
+    <meta name="twitter:image" content="{{ "assets/about.png" | absURL }}" />
+
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="{{ "assets/favicon.png" | relURL }}" />
+    <link rel="icon" type="image/svg+xml" href="{{ "assets/favicon.svg" | relURL }}" />
 
     <!-- Preload primary font so it's not delayed behind vendor CSS -->
     <link
@@ -29,15 +43,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
 
     {{ partial "head.html" . }}
   </head>
 
   <body>
+    <a class="skip-link" href="#about">Skip to content</a>
     {{ block "main" . }}{{ end }}
 
     <!-- Vendor JS Files -->
