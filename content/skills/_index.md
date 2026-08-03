@@ -9,12 +9,14 @@ skill_groups:
       - "Angular"
       - "React.js"
       - "Next.js (SSR, SSG)"
-      - "React Native, Ionic Mobile App Development"
+      - "React Native"
+      - "Ionic Mobile App Development"
       - "HTML & CSS (SCSS, Styled Components, Tailwind)"
       - "Node.js (Express.js, Nest.js, Fastify)"
       - "Vue.js"
       - "State Management (Ngxs, Ngrx, Redux/RTK)"
-      - "C#, ASP.NET MVC/Web API's"
+      - "C#"
+      - "ASP.NET MVC/Web API's"
 
   - name: "Database & APIs"
     skills:

@@ -183,6 +183,25 @@
   }
 
   /*--------------------------------------------------------------
+# Section background rhythm (alternating, overrides per-section
+# defaults below via ID specificity so every section keeps its
+# own component styles)
+--------------------------------------------------------------*/
+  #about,
+  #skills,
+  #education {
+    background: #fff;
+  }
+
+  #experience,
+  #projects,
+  #awards,
+  #certifications,
+  #contact {
+    background: #f9f9f9;
+  }
+
+  /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
   .about {
@@ -197,8 +216,7 @@
 
   .about .content p {
     margin-bottom: 20px;
-    max-width: 68ch;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
   .about .content .icon-box {
@@ -282,13 +300,22 @@
     background: #fff;
   }
 
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
   .skills .skill-item {
-    padding: 10px 15px;
-    margin-bottom: 15px;
+    padding: 9px 15px;
+    margin: 0;
     background: #f8f9fa;
     border: 1px solid transparent;
     border-radius: 5px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-weight: 600;
     color: #0e1624;
     font-size: 14px;
@@ -298,6 +325,18 @@
   .skills .skill-item:hover {
     border-color: rgba(18, 214, 64, 0.4);
     transform: translateY(-2px);
+  }
+
+  .skill-item-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .skill-item-icons img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
   }
 
   .skill-group {
@@ -700,9 +739,11 @@
   }
 
   .contact .info {
-    padding: 30px;
+    padding: 40px 28px;
     background: #fff;
+    border-radius: 16px;
     width: 100%;
+    text-align: center;
     box-shadow: 0 4px 24px 0 rgba(14, 22, 36, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
@@ -712,33 +753,42 @@
     box-shadow: 0 12px 32px 0 rgba(14, 22, 36, 0.14);
   }
 
+  .contact .info > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .contact .info i {
-    font-size: 20px;
+    font-size: 22px;
     color: #12d640;
-    float: left;
-    width: 44px;
-    height: 44px;
-    background: #f3f7f9;
+    width: 56px;
+    height: 56px;
+    background: rgba(18, 214, 64, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
+    border-radius: 50%;
+    margin-bottom: 18px;
     transition: all 0.3s ease-in-out;
   }
 
   .contact .info h4 {
-    padding: 0 0 0 60px;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #0e1624;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a94a6;
+    margin-bottom: 8px;
   }
 
   .contact .info p {
-    padding: 0 0 0 60px;
+    padding: 0;
     margin-bottom: 0;
-    font-size: 14px;
-    color: #444444;
+    font-size: 17px;
+    font-weight: 600;
+    color: #0e1624;
   }
 
   .contact .info .email:hover i,
@@ -756,29 +806,49 @@
     color: #fff;
     font-size: 14px;
     text-align: center;
-    padding: 30px 0;
+    padding: 56px 0 32px;
+    position: relative;
+  }
+
+  #footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 3px;
+    border-radius: 0 0 3px 3px;
+    background: #12d640;
   }
 
   #footer h3 {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
+    letter-spacing: -0.01em;
     color: #fff;
     position: relative;
     padding: 0;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
   }
 
   #footer p {
     font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
     padding: 0;
-    margin: 0 0 40px 0;
+    margin: 0 0 32px 0;
   }
 
   #footer .social-links {
-    margin: 0 0 40px 0;
+    margin: 0 0 32px 0;
   }
 
   #footer .copyright {
-    margin: 0 0 5px 0;
+    padding-top: 24px;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    letter-spacing: 0.02em;
   }
 </style>

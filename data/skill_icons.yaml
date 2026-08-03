@@ -1,0 +1,97 @@
+# Icon sources: Devicon (jsdelivr, pinned v2.17.0) and Simple Icons (cdn.simpleicons.org,
+# which bakes in the official brand color server-side). Only skills with a verified,
+# unambiguous logo match get icons here — the rest render as plain text, unchanged.
+
+"Javascript (ES6+)":
+  - { alt: "JavaScript", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/javascript/javascript-original.svg" }
+
+"Typescript":
+  - { alt: "TypeScript", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/typescript/typescript-original.svg" }
+
+"Python":
+  - { alt: "Python", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/python/python-original.svg" }
+
+"Angular":
+  - { alt: "Angular", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/angularjs/angularjs-original.svg" }
+
+"React.js":
+  - { alt: "React", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/react/react-original.svg" }
+
+"Next.js (SSR, SSG)":
+  - { alt: "Next.js", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/nextjs/nextjs-original.svg" }
+
+"React Native":
+  - { alt: "React", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/react/react-original.svg" }
+
+"Ionic Mobile App Development":
+  - { alt: "Ionic", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/ionic/ionic-original.svg" }
+
+"HTML & CSS (SCSS, Styled Components, Tailwind)":
+  - { alt: "HTML5", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/html5/html5-original.svg" }
+  - { alt: "CSS3", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/css3/css3-original.svg" }
+  - { alt: "Sass", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/sass/sass-original.svg" }
+  - { alt: "Tailwind CSS", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/tailwindcss/tailwindcss-original.svg" }
+
+"Node.js (Express.js, Nest.js, Fastify)":
+  - { alt: "Node.js", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/nodejs/nodejs-original.svg" }
+  - { alt: "Express", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/express/express-original.svg" }
+  - { alt: "NestJS", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/nestjs/nestjs-original.svg" }
+
+"Vue.js":
+  - { alt: "Vue.js", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/vuejs/vuejs-original.svg" }
+
+"State Management (Ngxs, Ngrx, Redux/RTK)":
+  - { alt: "Redux", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/redux/redux-original.svg" }
+
+"C#":
+  - { alt: "C#", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/csharp/csharp-original.svg" }
+
+"ASP.NET MVC/Web API's":
+  - { alt: "ASP.NET", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/dotnetcore/dotnetcore-plain.svg" }
+
+"SQL (MySQL, PostgreSQL, Sequelize ORM)":
+  - { alt: "MySQL", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/mysql/mysql-original.svg" }
+  - { alt: "PostgreSQL", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/postgresql/postgresql-original.svg" }
+
+"MongoDB (Mongoose)":
+  - { alt: "MongoDB", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/mongodb/mongodb-original.svg" }
+
+"GraphQL":
+  - { alt: "GraphQL", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/graphql/graphql-plain.svg" }
+
+"AI Agents: LangChain, LangGraph, CrewAI, PhiData":
+  - { alt: "LangChain", url: "https://cdn.simpleicons.org/langchain" }
+  - { alt: "CrewAI", url: "https://cdn.simpleicons.org/crewai" }
+
+"Workflow Automation: n8n, Make.com":
+  - { alt: "n8n", url: "https://cdn.simpleicons.org/n8n" }
+  - { alt: "Make", url: "https://cdn.simpleicons.org/make" }
+
+"Data Domain - NumPy, Pandas, Seaborn, StreamLit":
+  - { alt: "NumPy", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/numpy/numpy-original.svg" }
+  - { alt: "Pandas", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/pandas/pandas-original.svg" }
+  - { alt: "Streamlit", url: "https://cdn.simpleicons.org/streamlit" }
+
+"Unit Testing (Jest, Jasmine, Karma)":
+  - { alt: "Jest", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/jest/jest-plain.svg" }
+  - { alt: "Jasmine", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/jasmine/jasmine-original.svg" }
+  - { alt: "Karma", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/karma/karma-original.svg" }
+
+"Authentication (JWT, OAuth. FirebaseAuth)":
+  - { alt: "JWT", url: "https://cdn.simpleicons.org/jsonwebtokens" }
+  - { alt: "Firebase", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/firebase/firebase-plain.svg" }
+
+"E2E Automation Testing (Cypress, Playwright)":
+  - { alt: "Cypress", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/cypressio/cypressio-original.svg" }
+  - { alt: "Playwright", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/playwright/playwright-original.svg" }
+
+"AWS (Lambda, EC2, S3)":
+  - { alt: "AWS", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" }
+
+"Azure(VMs,BlobStorage)":
+  - { alt: "Azure", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/azure/azure-original.svg" }
+
+"Git, Docker & Linux (Administration, Deployments, Shell Scripts, Docker Containers)":
+  - { alt: "Git", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/git/git-original.svg" }
+  - { alt: "Docker", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/docker/docker-original.svg" }
+  - { alt: "Linux", url: "https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/linux/linux-original.svg" }

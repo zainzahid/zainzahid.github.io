@@ -1,9 +1,19 @@
 {{ range .Params.skill_groups }}
 <div class="skill-group">
   <h3>{{ .name }}</h3>
-  <div>
+  <div class="skill-list">
     {{ range .skills }}
-    <span class="skill-item">{{ . }}</span>
+    {{ $icons := index $.Site.Data.skill_icons . }}
+    <span class="skill-item">
+      {{ if $icons }}
+      <span class="skill-item-icons">
+        {{ range $icons }}
+        <img src="{{ .url }}" alt="" loading="lazy" />
+        {{ end }}
+      </span>
+      {{ end }}
+      <span>{{ . }}</span>
+    </span>
     {{ end }}
   </div>
 </div>
