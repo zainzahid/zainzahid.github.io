@@ -11,10 +11,13 @@
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="{{ "assets/favicon.png" | relURL }}" />
 
-    <!-- Google Fonts -->
+    <!-- Preload primary font so it's not delayed behind vendor CSS -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
+      rel="preload"
+      href="{{ "assets/SpaceGrotesk.ttf" | relURL }}"
+      as="font"
+      type="font/ttf"
+      crossorigin
     />
 
     <!-- Vendor CSS Files -->
